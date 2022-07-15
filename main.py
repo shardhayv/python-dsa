@@ -93,4 +93,5 @@ def digitSum(n):
         return (n % 10) + digitSum(int(n / 10))
 
 
-print(digitSum(134))
+user_input = input("Enter a positive integer :")
+print(digitSum(user_input))
