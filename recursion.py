@@ -98,13 +98,29 @@
 
 # CALCULATING THE POWER OF A NUMBER
 
-def power(base, exp):
-    assert 0 <= exp == int(exp), "exponent should be a positive integer"
-    if exp == 0:
-        return 1
-    if exp == 1:
-        return base
-    return base * power(base, exp - 1)
+# def power(base, exp):
+#     assert 0 <= exp == int(exp), "exponent should be a positive integer"
+#     if exp == 0:
+#         return 1
+#     if exp == 1:
+#         return base
+#     return base * power(base, exp - 1)
+#
+#
+# print(power(10,50))
+
+# GREATEST COMMON DIVISOR => GCD
+
+def gcd(a, b):
+    assert int(a) == a and int(b) == b, 'The number must be integer'
+    if a < 0:
+        a = -1 * a
+    if b < 0:
+        b = -1 * b
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
 
 
-print(power(10,50))
+print(gcd(48, 28))
