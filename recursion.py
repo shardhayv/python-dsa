@@ -84,14 +84,27 @@
 
 # method2
 
-def digitSum(n):
-    assert 0 <= n == int(n), "Please enter positive integer"
+# def digitSum(n):
+#     assert 0 <= n == int(n), "Please enter positive integer"
+#
+#     if n == 0:
+#         return 0
+#     else:
+#         return (n % 10) + digitSum(int(n / 10))
+#
+#
+# user_input = input("Enter a positive integer :")
+# print(digitSum(user_input))
 
-    if n == 0:
-        return 0
-    else:
-        return (n % 10) + digitSum(int(n / 10))
+# CALCULATING THE POWER OF A NUMBER
+
+def power(base, exp):
+    assert 0 <= exp == int(exp), "exponent should be a positive integer"
+    if exp == 0:
+        return 1
+    if exp == 1:
+        return base
+    return base * power(base, exp - 1)
 
 
-user_input = input("Enter a positive integer :")
-print(digitSum(user_input))
+print(power(10,50))
