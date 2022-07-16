@@ -111,16 +111,28 @@
 
 # GREATEST COMMON DIVISOR => GCD
 
-def gcd(a, b):
-    assert int(a) == a and int(b) == b, 'The number must be integer'
-    if a < 0:
-        a = -1 * a
-    if b < 0:
-        b = -1 * b
-    if b == 0:
-        return a
+# def gcd(a, b):
+#     assert int(a) == a and int(b) == b, 'The number must be integer'
+#     if a < 0:
+#         a = -1 * a
+#     if b < 0:
+#         b = -1 * b
+#     if b == 0:
+#         return a
+#     else:
+#         return gcd(b, a % b)
+#
+#
+# print(gcd(48, 28))
+
+# DECIMAL TO BINARY
+
+def decimal_to_binary(n):
+    assert int(n) == n, "Please Enter a Valid Integer"
+    if n == 0:
+        return 0
     else:
-        return gcd(b, a % b)
+        return n % 2 + 10 * decimal_to_binary(int(n / 2))
 
 
-print(gcd(48, 28))
+print(decimal_to_binary(15))
