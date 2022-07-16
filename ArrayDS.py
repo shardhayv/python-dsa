@@ -53,12 +53,17 @@ a = array('i', [1, 2, 3, 4, 5])
 
 # SEARCHING FOR AN ELEMENT IN AN ARRAY
 
+#
+# def searching(array, value):
+#     for i in array:
+#         if i == value:
+#             return a.index(value)
+#     return "The element doesn't exist in the array"
+#
+#
+# print(searching(a, 2))
 
-def searching(array, value):
-    for i in array:
-        if i == value:
-            return a.index(value)
-    return "The element doesn't exist in the array"
+a.remove(3)
+print(a)
 
 
-print(searching(a, 2))
