@@ -42,11 +42,23 @@ a = array('i', [1, 2, 3, 4, 5])
 # ACCESSING AN ELEMENT OF AN ARRAY
 # TIME COMPLEXITY ==> O(1)
 
-def element_index(array, index):
-    if index > len(array):
-        print("There is no element at this index")
-    else:
-        print(array[index])
+# def element_index(array, index):
+#     if index > len(array):
+#         print("There is no element at this index")
+#     else:
+#         print(array[index])
+#
+#
+# element_index(a, 3)
+
+# SEARCHING FOR AN ELEMENT IN AN ARRAY
 
 
-element_index(a, 3)
+def searching(array, value):
+    for i in array:
+        if i == value:
+            return a.index(value)
+    return "The element doesn't exist in the array"
+
+
+print(searching(a, 2))
